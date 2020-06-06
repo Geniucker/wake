@@ -33,7 +33,7 @@ jobs:
         $CONFIG_SITE: ${{ secrets.Site }} # 读取评论后台地址
       run: | 
         python run.py ${{ secrets.Site }}
-        echo `date +"%Y-%m-%d %H:%M:%S"` begin > time.log
+        echo `date +"%Y-%m-%d %H:%M:%S"` begin ${{ secrets.Site }} > time.log
     - name: Commit #更新日志到GitHub仓库
       run: |
         git config --global user.email AutoWakeUp@email.com
