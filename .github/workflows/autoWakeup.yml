@@ -34,7 +34,6 @@ jobs:
       run: | 
         python run.py ${{ secrets.Site }}
         echo `date +"%Y-%m-%d %H:%M:%S"` begin > time.log
-        echo ${{ secrets.Site }} > time.log
     - name: Commit #更新日志到GitHub仓库
       run: |
         git config --global user.email AutoWakeUp@email.com
